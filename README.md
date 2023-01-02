@@ -23,5 +23,6 @@ This repository presents some of the projects I had to implement throughout the 
 * visually analyze the [Gapminder Dataset](https://www.gapminder.org/data/) and create an animated scatterplot 
 * **Keywords:** Scatterplot, Descriptive statistics, Matplotlib, Seaborn
 
-![Alt Text](https://github.com/florianriemann/data_science_portfolio/blob/florian/01_animated_scatterplot/gapminder_years.gif)
+![Alt Text](https://github.com/florianriemann/boot_camp/blob/main/01_animated_scatterplot/gapminder_years.gif)
+
 
