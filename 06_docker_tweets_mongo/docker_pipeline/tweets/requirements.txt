@@ -1,0 +1,4 @@
+SQLAlchemy==1.3.23
+tweepy==4.4.0
+psycopg2-binary
+pymongo

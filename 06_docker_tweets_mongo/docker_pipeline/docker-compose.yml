@@ -1,0 +1,42 @@
+version: '3'
+
+# docker-compose build (1x only if you edit the Dockerfile or files used by it)
+# docker-compose up    (everytime you start the pipeline)
+
+# a list of all containers you intend to use
+services:
+
+  # first: SQL DB
+  mongodb:                                 # name : also the hostname
+    image: mongo                        # image downloaded from DockerHub
+    ports:
+    - 27017:27017                        # 
+
+  # second: run Python
+  tweets:              # name
+    build: tweets/     # look for a Dockerfile here -> creates an image
+    volumes:               # this is how we get the python program + files in:
+    - ./tweets/:/app   # makes the karaokebot/ folder available in the container as app/
+    depends_on:            # this means that the postgres container is started then the karaokebot
+    - mongodb
+
+  # third: do ETL
+  etl_process:
+    build: etl_process/
+    volumes:
+      - ./etl_process/:/app
+    depends_on:
+      - mongodb
+      - postgres_db
+
+  # fourth: do ETL
+  postgres_db:
+      image: postgres:14.5
+      ports:
+        - 5555:5432
+      environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=12345678
+        - POSTGRES_DB=postgres
+        
+        
