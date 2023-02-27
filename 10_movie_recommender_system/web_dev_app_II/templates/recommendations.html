@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+</head>
+<body>
+    <h1> 🎥 Recommendations </h1>
+     <p> Hop on the sofa and watch one the folling movie:</p>
+     <p>
+     <ul style="list-style-type:none">
+        <!-- How do me pass python variables to html? -->
+        <!-- We use Jinja tags -->
+        <!-- <li>{{movie1}}</li>
+        <li>{{movie2}}</li> -->
+        <!-- What if we need a to pass a list?
+        We use a Jinja for statement -->
+        {% for movie in movies_list %}
+            <li>{{movie}}</li>
+        {% endfor %}
+     </ul>
+     </p>
+     <p> Click <a href="/">here</a> to go home</p>
+</body>
+</html>

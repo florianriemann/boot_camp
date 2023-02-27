@@ -1,0 +1,54 @@
+/* General sintax */
+
+/* selector {
+    property:value;
+    another_property:value;
+} */
+
+/* Changing the style by selecting the tag */
+
+h1 {
+    color: coral;
+}
+
+p {
+    color:cadetblue
+}
+
+body {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lavender;
+
+}
+
+label {
+    position: absolute;
+    left:30%;
+}
+
+/* Changing the style by selecting the id attribute of tag */
+
+#rating-paragraph {
+    color:darkgreen
+}
+
+#logo-homepage {
+    border-radius: 300px;
+}
+
+#logo-homepage:hover {
+background-color: ivory;
+    box-shadow: 3px 3px 6px;
+}
+/* Changing the style by selecting the class attribute of tag */
+
+.rating-form {
+    max-width: 200px;
+    background-color: blanchedalmond;
+}
+
+.rating-form:hover{
+    background-color: ivory;
+    box-shadow: 3px 3px 6px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Movie Recommender</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <h1> 🧄 📈 Movie Recommender </h1>
+        <p> Welcome to the amazing movie recommender</p>
+        <img id="logo-homepage" src="../static/logo.jpg" width="300" height="300">
+        <p id="rating-paragraph">Rate the following movies on a scale 1.0-5.0</p>
+        
+        
+        <!-- the form tag allows us to send user data to the server -->
+        <form action="/recommendations">
+            <!-- the 'name' attribute is the key of the user query therefore need to be equal to the move 
+               title as you have in your user-movie rating ddataframe 🌟-->
+            <label>Toy Story:</label><input class="rating-form" type="int" name="toy story" placeholder="1.0-5.0"><br> 
+            <label>Avatar:</label><input class="rating-form" type="int" name="avatar" placeholder="1.0-5.0"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p> Click <a href="/recommendations">here</a> to get recommendations</p>
+    </body>
+</html>
